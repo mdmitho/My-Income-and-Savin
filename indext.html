@@ -21,28 +21,24 @@
        
        
         <div class="col">
-          <div class="card">
             <img class="w-100 img" src="./img/img 1.jpg" alt="">
-            
-          </div>
         </div>
         <div class="col">
-          <div class="card">
             <div class="p-3 border bg-light ">
                 <h3 class="fw-bold text-center mt-5 " >Income </h3>
-                <p class=" text-center mt-4 fw-bold">Income: <input type="text"></p>
+                <p class=" text-center mt-4 fw-bold">Income: <input id="income-input" class="ms-4" type="text"></p>
                 <h3 class="fw-bold text-center mt-4 ">Expenses </h3>
-                <p class=" text-center mt-4 fw-bold" >Food:<input class="ms-5" type="text"></p>
-                <p class=" text-center mt-4 fw-bold">Rent:<input class="ms-5" type="text"></p>
-                <p class=" text-center mt-4 fw-bold">Clothes: <input class="ms-4" type="text"></p>
+                <p class=" text-center mt-4 fw-bold" >Food:<input id="food-input" class="ms-5" type="text"></p>
+                <p class=" text-center mt-4 fw-bold">Rent:<input id="rent-input" class="ms-5" type="text"></p>
+                <p class=" text-center mt-4 fw-bold">Clothes: <input id="clothes-input" class="ms-4" type="text"></p>
 
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <button class="btn btn-primary" type="button">Calculate</button>
+                    <button id="calculate-btn" class="btn btn-primary" type="button">Calculate</button>
                   </div>
                
                <div class="">
-                <h4 class="text-center mt-3 ">Total Expenses: <span>1200</span></h4>
-                <h4  class="text-center mt-4 ">Balance: <span>4500</span></h4>
+                <h4 class="text-center mt-3 ">Total Expenses: <span id="total-expenses">1200</span></h4>
+                <h4  class="text-center mt-4 ">Balance: <span id="Balance">4500</span></h4>
                </div>
 
                  <div class="">
@@ -50,7 +46,7 @@
                         <div class="row gx-1">
                           <div class="col-6">
                            <div class="p-3  bg-light ">
-                            <p class=" text-center mt-4 fw-bold w-100 h-100">Save:<input class="w-50 ms-3  " type="text"></p>
+                            <p class=" text-center mt-4 fw-bold w-100 h-100">Save:<input id="save-input" class="w-50 ms-3  " type="text"></p>
                            </div>
                           </div>
                           <div class="col-2">
@@ -60,18 +56,18 @@
                           </div>
                           <div class="col-4">
                             <div class="p-3  bg-light mt-4">
-                                <button class="btn btn-primary w-100 h-100" type="button">Save</button>
+                                <button id="save-btn" class="btn btn-primary w-100 h-100" type="button">Save</button>
 
                             </div>
                           </div>
                           <div class="">
-                            <h4 class="text-center mt-3 ">Saving Amount: <span>1200</span></h4>
-                            <h4  class="text-center mt-4 ">Remaining Balance: <span>4500</span></h4>
+                            <h4 class="text-center mt-3 ">Saving Amount: <span id="saving-amount">1200</span></h4>
+                            <h4  class="text-center mt-4 ">Remaining Balance: <span id="remaining-balance">4500</span></h4>
                           </div>
                         </div>
                       </div>
                  </div>
-            </div>
+   
           
           </div>
         </div>
