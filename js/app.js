@@ -25,13 +25,26 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
 
    const expensesAmount = foodAmonut+rentAmount+clothesAmount;
    const totalAmount = incomeAmonut-expensesAmount;
-   if(expensesAmount>0 && totalAmount>0){
-    totalExpenses.innerText = expensesAmount;
-    BalanceTotal.innerText = totalAmount;
+
+   if(expensesAmount>totalAmount){
+   alert('You have Expenses too much money')
    }
    else{
-     alert('Please Enter a Positive Number')
+    if(foodAmonut>0 && rentAmount>0 && clothesAmount>0 ){
+        totalExpenses.innerText = expensesAmount;
+        if(totalAmount>0){
+            BalanceTotal.innerText = totalAmount;
+        }
+        else{
+            alert('Please Enter a Positive Number')
+          }
+       
+       }
+       else{
+         alert('Please Enter a Positive Number')
+       }
    }
+  
 
 
 
