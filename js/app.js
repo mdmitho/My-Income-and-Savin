@@ -12,7 +12,7 @@ function Expensescalculate(){
     const clothesAmount = getInputValue('clothes-input')
     
 
-    if(foodAmonut<0 || rentAmount<0 || clothesAmount<0 ){
+    if(foodAmonut<0 || rentAmount<0 || clothesAmount<0  ){
         alert('Please Enter a Positive Number')
     }
 else{
@@ -25,7 +25,7 @@ function totalBalance(){
     const incomeAmonut = getInputValue("income-input")
     const totalCalculate= Expensescalculate();
 
-    if(incomeAmonut<0){
+    if(incomeAmonut<0 && incomeAmonut!== typeof(Number)){
         alert('Please Enter a Positive Number')
     }
     else{
@@ -37,10 +37,10 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
 
    const totalExpenses = document.getElementById('total-expenses');
    const totalCalculate= Expensescalculate();
-   totalExpenses.innerText =totalCalculate;
    const BalanceTotal=document.getElementById('Balance')
    const balance=totalBalance();
-   BalanceTotal.innerText=balance;
+    totalExpenses.innerText =totalCalculate;
+    BalanceTotal.innerText=balance;
 })
 
 document.getElementById('save-btn').addEventListener('click',function(){
@@ -48,15 +48,20 @@ document.getElementById('save-btn').addEventListener('click',function(){
     const remainingAmount =document.getElementById("remaining-balance")
     const incomeAmonut = getInputValue("income-input")
     const saveInput = getInputValue("save-input")
-    if(saveInput<0){
+    if(saveInput<0 && saveInput!= Number){
         alert('Please Enter a Positive Number')
     }
     else{
         const savingAmountTotal =(incomeAmonut*saveInput)/100;
-        saveingAmount.innerText =savingAmountTotal;
         const previousBalanceTotal = totalBalance()
         const remainingBalance =previousBalanceTotal-savingAmountTotal;
-        remainingAmount.innerText=remainingBalance;
+        if(savingAmountTotal<remainingAmount){
+            alert('আপনার কাছে জমানো টাকা নাই')
+        }
+        else{
+            saveingAmount.innerText =savingAmountTotal;
+            remainingAmount.innerText=remainingBalance;
+        }
     }
 
     const incomeField = document.getElementById('income-input')
